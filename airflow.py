@@ -45,7 +45,7 @@ default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
     'start_date': datetime(2024, 7, 20),
-    'email': ['nikkibiradar@gmail.com'],
+    'email': ['email ID'],
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 2,
