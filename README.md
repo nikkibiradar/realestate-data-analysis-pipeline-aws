@@ -73,7 +73,7 @@ This project consists of several components working together to achieve an autom
 ![onlyTitle](airflow.png)
 > Apache Airflow DAG showing the ETL process workflow
 
-![onlyTitle](quicksight_analysis.png)
+![onlyTitle](quicksight analysis.png)
 > Amazon QuickSight visualizations of the Zillow data
 
 ## Insights Gained
