@@ -70,10 +70,10 @@ This project consists of several components working together to achieve an autom
 * Amazon QuickSight is connected to the Amazon Redshift cluster to create visualizations and dashboards.
 * The visualizations provide insights into the real estate market, such as average price by number of bedrooms and average price by zipcode.
 
-![onlyTitle](images/onlyTitle.png)
+![onlyTitle](airflow.png)
 > Apache Airflow DAG showing the ETL process workflow
 
-![onlyTitle](images/onlyTitle.png)
+![onlyTitle](quicksight_analysis.png)
 > Amazon QuickSight visualizations of the Zillow data
 
 ## Insights Gained
