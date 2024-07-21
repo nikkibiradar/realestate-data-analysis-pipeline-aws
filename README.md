@@ -14,7 +14,7 @@ This project automates a Python ETL process to extract real estate property data
 - [Data Loading](#data-loading)
 - [Data Visualization](#data-visualization)
 - [Insights Gained](#insights-gained)
-- [Conclusion](#conclusion)
+- [Future Work](#future-work)
 
 ## Architecture
 
@@ -60,6 +60,10 @@ This project consists of several components working together to achieve an autom
 ### Load
 * Apache Airflow utilizes an S3KeySensor operator to monitor the S3 bucket for the presence of the transformed CSV file.
 * Once the file is detected, another task in the Airflow DAG loads the data into an Amazon Redshift table for storage and further analysis.
+
+![onlyTitle](airflow.png)
+> Apache Airflow DAG showing the ETL process workflow
+
 ## Data Transformation
 * The data transformation step involves cleaning the data, selecting relevant columns (e.g., bathrooms, bedrooms, city, homeStatus, homeType, livingArea, price, rentZestimate, zipcode), and handling missing values.
 * The transformed data is then saved as a CSV file and uploaded to the designated S3 bucket.
@@ -68,12 +72,9 @@ This project consists of several components working together to achieve an autom
 * This operator ensures that the data is correctly loaded into Redshift, where it can be queried and analyzed.
 ## Data Visualization
 * Amazon QuickSight is connected to the Amazon Redshift cluster to create visualizations and dashboards.
-* The visualizations provide insights into the real estate market, such as average price by number of bedrooms and average price by zipcode.
+* Example visualizations provide insights into the real estate market, such as average price by number of bedrooms and average price by zipcode.
 
-![onlyTitle](airflow.png)
-> Apache Airflow DAG showing the ETL process workflow
-
-![onlyTitle](quicksight analysis.png)
+![onlyTitle](quicksight_analysis.png)
 > Amazon QuickSight visualizations of the Zillow data
 
 ## Insights Gained
@@ -86,10 +87,7 @@ Working on this project provided several valuable insights:
 5. Data Warehousing: Understood the process of loading and managing data in Amazon Redshift, including schema design and data loading best practices.
 6. Data Visualization: Improved capabilities in creating insightful visualizations and dashboards using Amazon QuickSight to analyze real estate data trends.
 
-## Conclusion
-This project demonstrates an end-to-end data engineering pipeline, from data extraction to visualization, using various AWS services and Python. It automates the entire ETL process, ensuring data is accurately extracted, transformed, loaded, and visualized.
-
-Future Work
+## Future Work
 1. Implement additional data quality checks.
 2. Enhance the transformation logic for more complex data scenarios.
 3. Integrate other data sources to enrich the analysis.
